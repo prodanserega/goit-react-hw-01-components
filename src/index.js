@@ -15,7 +15,17 @@
 // // to log results (for example: reportWebVitals(console.log))
 // // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
-import React from 'react';
 
-const element = React.createElement('div', {});
-console.log(element);
+import React from "react";
+import ReactDOM from "react-dom";
+
+import "modern-normalize/modern-normalize.css";
+import "./index.css";
+import App from "./components/App";
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
