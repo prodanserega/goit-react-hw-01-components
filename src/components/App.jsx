@@ -1,6 +1,10 @@
 import React from "react";
+
 import Profile from "./Profile/profile";
+import Statistics from "./Statistics/statistical-data";
+
 import userData from "../data/user.json";
+import statsData from "../data/statistical-data.json";
 
 const App = () => {
   return (
@@ -12,6 +16,7 @@ const App = () => {
         avatar={userData.avatar}
         stats={userData.stats}
       />
+      <Statistics items={statsData} />
     </>
   );
 };
