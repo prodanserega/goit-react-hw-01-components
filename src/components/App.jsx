@@ -2,9 +2,11 @@ import React from "react";
 
 import Profile from "./Profile/profile";
 import Statistics from "./Statistics/statistical-data";
+import FriendList from "./friends/friends";
 
 import userData from "../data/user.json";
 import statsData from "../data/statistical-data.json";
+import friends from "../data/friends.json";
 
 const App = () => {
   return (
@@ -17,6 +19,7 @@ const App = () => {
         stats={userData.stats}
       />
       <Statistics items={statsData} />
+      <FriendList friends={friends} />
     </>
   );
 };
