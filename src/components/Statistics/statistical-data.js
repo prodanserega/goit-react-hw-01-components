@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import s from "./Statistics.module.scss";
 
@@ -24,6 +25,21 @@ const Statistics = ({ items }) => {
       <StatsList items={items} />
     </section>
   );
+};
+
+Statistics.defaultProps = {
+  title: "",
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
 };
 
 export default Statistics;

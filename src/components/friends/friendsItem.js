@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import s from "./friends.module.scss";
 
@@ -10,6 +11,12 @@ const FriendItem = ({ id, avatar, name, isOnline }) => {
       <p className={s.name}>{name}</p>
     </li>
   );
+};
+
+FriendItem.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
 };
 
 export default FriendItem;
